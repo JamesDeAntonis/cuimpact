@@ -70,7 +70,6 @@ var display_events = function(events){
 $(document).ready(function(){
       $("#homeTab").removeClass("active");
       $("#viewAllTab").addClass("active");
-      $("#searchTab").removeClass("active");
       $("#uploadTab").removeClass("active");
 
       //initial display 
@@ -81,17 +80,44 @@ $(document).ready(function(){
       var checktrans = document.getElementById("trans-rights");
       var checkIndg = document.getElementById("indigenous-rights");
 
-      if (checkEnv.checked == true){
-            events = events[3]
-            display_events(events);
-      } 
-      if (checktrans.checked == true){
-            events = events[2]
-            display_events(events);
-      } 
-      if (checkIndg.checked == true){
-            events = [events[0], events[1]]
-            display_events(events);
-      } 
+      var indigenous_events=[];
+      var trans_events=[];
+      var environmental_events=[];
+      for (e = 0; e < events.length; e++) {
+            if(events[e].issue_tags == "indigenous-rights"){
+                  indigenous_events.push(events[e])
+            }
+            if(events[e].issue_tags == "environmental-justice"){
+                   environmental_events.push(events[e])
+            }
+            if(events[e].issue_tags == "trans-rights"){
+                   trans_events.push(events[e])
+            }
+      }
 
+      var checkBoxes = document.querySelectorAll(".checkBoxes input");
+
+      for (var i = 0; i < checkBoxes.length; i++) {
+          checkBoxes[i].addEventListener("click", filterItems, false);
+      }
+        
+      // the event handler!
+      function filterItems(e) {
+          if (checkEnv.checked == true) {
+              display_events(environmental_events);
+          } 
+          else if (checktrans.checked == true) {
+              display_events(trans_events);
+          } 
+          else if (checkIndg.checked == true){
+              display_events(indigenous_events);
+          }
+          else{
+            display_events(events)
+          }
+      }
+
+
+
+      
 });

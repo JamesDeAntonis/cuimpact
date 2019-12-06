@@ -29,7 +29,6 @@ $(document).ready(function(){
 
   $("#homeTab").removeClass("active");
   $("#viewAllTab").removeClass("active");
-  $("#searchTab").removeClass("active");
   $("#uploadTab").addClass("active");
 
 	$("#addEvent").click(function(){
