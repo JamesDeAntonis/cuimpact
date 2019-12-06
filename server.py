@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 from flask import Flask
 from flask import render_template
-from flask import Response, request, jsonify
+from flask import Response, request, jsonify, redirect
 app = Flask(__name__)
 
 current_id = 4
@@ -68,7 +68,9 @@ events=[
 }
 ]
 	
-
+@app.route('/')
+def hello():
+    return redirect("/home", code=302)
 
 @app.route('/home')
 def home():
