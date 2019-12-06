@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'view_all.js') }}"></script>
+<script>
+	var events = {{events|tojson}}
+	var current_id= {{current_id|tojson}}
+</script>
+   <div class="row">
+		<div class="col-md-12 header">
+		Activist Events on Campus
+		</div>
+   </div>
+ <div class="row">
+	<div class="col-md-12">
+	Filter by Issue!
+	</div>
+</div>
+ <div class="row">
+	<div class="col-md-4">
+	<input type="checkbox" id="environmental-justice"> Environmental Justice
+	</div>
+	<div class="col-md-4">
+	<input type="checkbox" id="trans-rights"> Trans Rights
+	</div>
+	<div class="col-md-4">
+	<input type="checkbox" id="indigenous-rights"> Indigenous Rights
+	</div>
+</div>
+<div id="allEvents">
+</div>
+ {% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+<script>
+	var group = {{group|tojson}}
+	var name= {{name|tojson}}
+	var description = {{description|tojson}}
+	var link = {{link|tojson}}
+	var email = {{email|tojson}}
+	var img = {{img|tojson}}
+	var when = {{when|tojson}}
+	var loc = {{loc|tojson}}
+</script>
+
+   <div class="row field">
+	   	<div class="col-md-6 header">
+	    	<span id="nameView"></span>
+	    </div>
+   </div>
+   <div class="row">
+	   	<div class="col-md-6">
+	   		<div class="col-md-12">
+				<span id="imgView"></span>
+			</div>
+			<div class="col-md-12">
+				<span id="descriptionView"></span>
+			</div>	
+			<div class="col-md-12">
+				<span><b><h4>When:</b></h4></span><span id="whenView"></span>
+			</div>
+			<div class="col-md-12">
+				<span><b><h4>Where:</b></h4></span><span id="locView"></span>
+			</div>
+		</div>	
+		</div>
+   </div>
+   <div class="row">
+   		<div class="col-md-2"></div>
+   		<div class="col-md-4" id="buttons">
+   		</div>
+   </div>
+
+
+ {% endblock %}

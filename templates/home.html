@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">	
+	<div class="home-container">
+  	<img src="/static/media/activism.jpg" style="width:100%;">
+  	<div class="layer">
+  	<div class="text-block" id="welcome">
+  		<span class="head">Welcome to CUImpact, your central hub for all of the<br> activist events on campus.</span>
+  		<p> Want to learn about or fight for an issue? Find an event happening on campus! </p>
+  	</div>
+  	<a href="/upload_event" class="welcomeLink"><div class="welcomeButton" id="upload">
+  		<span class="smaller">Upload your event!</span>
+  	</div></a>
+  	<a href="/upload_event" class="welcomeLink"><div class="welcomeButton" id="find">
+  		<span class="smaller">Find an event based on issue!</span>
+  	</div></a>
+	</div>
+	</div>
+</div>
+{% endblock %}
