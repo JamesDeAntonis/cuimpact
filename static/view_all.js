@@ -11,26 +11,53 @@ var display_events = function(events){
       }
 
       var i = 0
-      while(i <= events.length/2){
+      while(i <= events.length){
 
-
-            //normal procedure
-            if((i != (events.length-1)) && (odd != true)){
+            //if even 
+            if(odd != true){
                   var event = '<div class="row">\
-                  <div class="col-md-5 event"><div class="row"><div class="col-md-10"><a href="view/' + events[i].id + '">' + events[i].name + '\
-                  </a></div></div><div class="row"><div class="col-md-8"><img src="'+ events[i].img + '" class="img-fluid" height="100px" width="200px"></div></div>'
-                  + '<div class="row"><div class="col-md-10">' + events[i].when + '</div></div>' + '\
-                  </div><div class="col-md-5 event"><div class="row"><div class="col-md-10"><a href="view/' + events[i+1].id + '">' + events[i+1].name + '\
-                  </a></div></div><div class="row"><div class="col-md-8"><img src="'+ events[i+1].img + '" class="img-fluid" height="100px" width="200px"></div><div>'
-                  + '<div class="row"><div class="col-md-10">' + events[i+1].when + '</div></div></div></div>';
+                  <div class="col-md-6"><div class="card"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                  <h5 class="card-title">' + events[i].name + '</h5>' + '\
+                  <p class="card-text">' + events[i].description.substring(0,150) + '...</p></div>' + '\
+                  <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i].when + '</h5></li>' + '\
+                  <li class="list-group-item">' + events[i].group + '</li></ul>' + '\
+                  <a href="view/' + events[i].id + '"><div class="card-body viewEvBut">View Event</div></a></div></div>' + '\
+                  <div class="col-md-6"><div class="card"><img src="' + events[i+1].img + '" class="card-img-top"><div class="card-body">' + '\
+                  <h5 class="card-title">' + events[i+1].name + '</h5>' + '\
+                  <p class="card-text">' + events[i+1].description.substring(0,150) + '...</p> </div>' + '\
+                  <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i+1].when + '</h5></li>' + '\
+                  <li class="list-group-item">' + events[i+1].group + '</li></ul>' + '\
+                  <a href="view/' + events[i+1].id + '"><div class="card-body viewEvBut">View Event</div></a></div>'
             }
-            //last element and odd is true
-            else{
-                  var event = '<div class="row">\
-                  <div class="col-md-5 event" href="view/">' + events[i].id + '<div class="row"><div class="col-md-10"><a href="view/' + events[i].id + '">' + events[i].name + '\
-                  </a></div></div><div class="row"><div class="col-md-8"><img src="'+ events[i].img + '" class="img-fluid" height="100px" width="200px"></div></div>'
-                  + '<div class="row"><div class="col-md-10">' + events[i].when + '</div></div></div>' + '\
-                  <div class="col-md-5"></div></div>';
+            //if odd
+            {
+                  //if last element, accompanying column must be blank
+                  if(i == (events.length-1)){
+                        var event = '<div class="row">\
+                        <div class="col-md-6"><div class="card"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                        <h5 class="card-title">' + events[i].name + '</h5>' + '\
+                        <p class="card-text">' + events[i].description.substring(0,150) + '...</p></div>' + '\
+                        <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i].when + '</h5></li>' + '\
+                        <li class="list-group-item">' + events[i].group + '</li></ul>' + '\
+                        <a href="view/' + events[i].id + '"><div class="card-body viewEvBut">View Event</div></a></div></div>' + '\
+                        <div class="col-md-6"></div></div>'
+                  }
+                  else{
+                        var event = '<div class="row">\
+                        <div class="col-md-6"><div class="card"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                        <h5 class="card-title">' + events[i].name + '</h5>' + '\
+                        <p class="card-text">' + events[i].description.substring(0,150) + '...</p></div>' + '\
+                        <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i].when + '</h5></li>' + '\
+                        <li class="list-group-item">' + events[i].group + '</li></ul>' + '\
+                        <a href="view/' + events[i].id + '"><div class="card-body viewEvBut">View Event</div></a></div></div>' + '\
+                        <div class="col-md-6"><div class="card"><img src="' + events[i+1].img + '" class="card-img-top"><div class="card-body">' + '\
+                        <h5 class="card-title">' + events[i+1].name + '</h5>' + '\
+                        <p class="card-text">' + events[i+1].description.substring(0,150) + '...</p> </div>' + '\
+                        <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i+1].when + '</h5></li>' + '\
+                        <li class="list-group-item">' + events[i+1].group + '</li></ul>' + '\
+                        <a href="view/' + events[i+1].id + '"><div class="card-body viewEvBut">View Event</div></a></div>'
+                  }
+
             }
 
             i=i+2
