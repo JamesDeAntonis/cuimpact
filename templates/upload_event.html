@@ -7,95 +7,57 @@
 </script>
    <div class="row field">
 	   	<div class="col-md-12">
-	    	<p class="text-center" id="new">Upload your event!</p>
+	    	<p class="text-center" id="new">Post event!</p>
 	    </div>
    </div>
-
-   <div class="row field">
-   		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Title of Event:</b> <input type="text" id="eventName" placeholder="Ex: Climate Justice Protest" size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Group Name:</b> <input type="text" id="groupName" placeholder="CU Climate Activists" size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Group Email:</b><br><input type="text" id="emailName" placeholder="group@columbia.edu" size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Description of Event:</b> <br><textarea rows="10" cols="40" id="descriptionEvent" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta ultrices ex sed maximus."></textarea>
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Issue Tags:</b><br><input type="text" id="eventLink" placeholder="environmental-justice" size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Facebook Event Link:</b><br><input type="text" id="eventLink" placeholder="http:/facebook.com/" size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Link to Image:</b><br><input type="text" id="imageLink" placeholder="Google Drive link..." size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Date and Time:</b><br><input type="text" id="whenName" placeholder="Nov 30 2-4 PM" size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class="col-md-3">
-   		</div>
-		<div class="col-md-6">
-			<b>Location of Event:</b><br><input type="text" id="locationName" placeholder="Diana Center" size="30">
-		</div>
-		<div class="col-md-3">
-   		</div>
-	</div>
-	<div class="row field">
-		<div class = "col-md-12">
-			<p class="text-center"><button type="button" id="addEvent" class="btn btn-primary button">Add Event</button></p>
-		</div>
-	</div>
+<form>
+  <div class="form-row">
+  	<div class="form-group col-md-6">
+      <label for="groupName">Group Name:</label>
+      <input type="text" class="form-control" id="groupName" placeholder="CU Climate Activists">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="emailName">Group Email:</label>
+      <input type="email" class="form-control" id="emailName" placeholder="group@columbia.edu">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="eventName">Title of Event:</label>
+    <input type="text" class="form-control" id="eventName" placeholder="Climate Justice Protest">
+  </div>
+  <div class="form-row">
+  	<div class="form-group col-md-6">
+      <label for="groupName">Date and Time:</label>
+      <input type="text" class="form-control" id="whenName" placeholder="Dec 4 10-12 AM">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="emailName">Location of Event:</label>
+      <input type="email" class="form-control" id="locationName" placeholder="Diana Center">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Description of Event:</label>
+    <br>
+    <textarea rows="4" cols="100" id="descriptionEvent" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta ultrices ex sed maximus."class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="eventLink">Facebook Event Link:</label>
+    <input type="text" class="form-control" id="eventLink" placeholder="http:/facebook.com/">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Select an Issue Tag:</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>environmental-justice</option>
+      <option>lgbtq</option>
+      <option>indigenous-rights</option>
+      <option>black-rights</option>
+      <option>immigration</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="imageLink">Link to Image:</label>
+    <input type="text" class="form-control" id="imageLink" placeholder="Google Drive link...">
+  </div>
+  <button type="submit" class="btn btn-primary" id="addEvent">Post Event</button>
+</form>
  {% endblock %}

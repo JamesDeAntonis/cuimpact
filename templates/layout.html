@@ -11,21 +11,21 @@
 
 		<style>
 		#bar{
-			margin-bottom:30px;
-			background-color:#334154;
+			margin-bottom:15px;
+			background-color:#609197;
 		}
 		#head{
 			margin-top:30px;
 		}
 		#bar a.active{
-			color:white;
+			color:black;
 		}
 		#bar a{
-			color:white;
+			color:black;
 			font-size:18px;
 		}
 		#bar a:hover{
-			color:black;
+			color:white;
 		}
 		body{
 		      font-family: 'Lato', sans-serif;
@@ -117,6 +117,17 @@
 		#buttons{
 			margin:20px;
 		}
+		 .logo-image{
+		    width: 46px;
+		    height: 46px;
+		    border-radius: 50%;
+		    overflow: hidden;
+		    margin-top: -6px;
+		}
+		.nav-item{
+			margin-top:2px;
+			margin-left:5px;
+		}
 		</style>
 	</head>
 
@@ -124,17 +135,15 @@
   	<body>
   	<header>
 	  	<div class="container">
-	  		<div class="row">
-	  			<div class="col-md-12 header" id="head">
-	  			<img src="/static/media/fist.png" align="left" height="50px" width="50px"> CU Impact
-	  			</div>
-	  		</div>
 			<nav class="navbar navbar-expand-lg" id="bar">
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			    <div class="navbar-nav">
-			    <a class="nav-item nav-link active" href="/home" id="homeTab">Home</a>
-			      <a class="nav-item nav-link" href="/upload_event" id="uploadTab">Upload Event</a>
-			      <a class="nav-item nav-link" href="/view_all" id="viewAllTab">Find an Event</a>
+			    <a class="navbar-brand" href="/home" id="homeTab">
+		    		<span><img src="/static/media/fist.jpg" class="img-fluid logo-image"></span>
+		    		CU Impact
+			    </a>		    
+			     <a class="nav-item nav-link" href="/view_all" id="viewAllTab"><span></span>Find an Event</a>
+			     <a class="nav-item nav-link" href="/upload_event" id="uploadTab">Post Event</a>
 			    </div>
 			  </div>
 			</nav>

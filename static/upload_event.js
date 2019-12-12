@@ -10,8 +10,9 @@ var upload_event = function(new_item){
 		success: function(result){
 			//add writing to writing variable
 			events.unshift(new_event)
+			location.href = "/view/" + current_id
 			current_id += 1
-			location.href = "/view_all"
+			
 		},
         error: function(request, status, error){
 
