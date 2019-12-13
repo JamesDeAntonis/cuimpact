@@ -14,50 +14,49 @@ var display_events = function(events){
       while(i <= events.length){
 
             //if even 
-            if(odd != true){
+            if(odd == false){
                   var event = '<div class="row">\
-                  <div class="col-md-6"><div class="card"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                  <div class="col-md-6"><a href="view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                   <h5 class="card-title">' + events[i].name + '</h5>' + '\
-                  <p class="card-text">' + events[i].description.substring(0,150) + '...</p></div>' + '\
-                  <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i].when + '</h5></li>' + '\
-                  <li class="list-group-item">' + events[i].group + '</li></ul>' + '\
-                  <a href="view/' + events[i].id + '"><div class="card-body viewEvBut">View Event</div></a></div></div>' + '\
-                  <div class="col-md-6"><div class="card"><img src="' + events[i+1].img + '" class="card-img-top"><div class="card-body">' + '\
+                  <p class="card-text date">' + events[i].when + '</p>\
+                  <p class="card-text group">' + events[i].group + '</p>\
+                  <p class="card-text desc">' + events[i].description.substring(0,175) + '...</p></div>' + '\
+                  </div></a></div>' + '\
+                  <div class="col-md-6"><a href="view/' + events[i+1].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i+1].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                   <h5 class="card-title">' + events[i+1].name + '</h5>' + '\
-                  <p class="card-text">' + events[i+1].description.substring(0,150) + '...</p> </div>' + '\
-                  <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i+1].when + '</h5></li>' + '\
-                  <li class="list-group-item">' + events[i+1].group + '</li></ul>' + '\
-                  <a href="view/' + events[i+1].id + '"><div class="card-body viewEvBut">View Event</div></a></div>'
+                  <p class="card-text date">' + events[i+1].when + '</p>\
+                  <p class="card-text group">' + events[i+1].group + '</p>\
+                  <p class="card-text desc">' + events[i+1].description.substring(0,175) + '...</p></div>' + '\
+                  </div></div></div>'
             }
             //if odd
-            {
+            else{
                   //if last element, accompanying column must be blank
                   if(i == (events.length-1)){
                         var event = '<div class="row">\
-                        <div class="col-md-6"><div class="card"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                        <div class="col-md-6"><a href="view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                         <h5 class="card-title">' + events[i].name + '</h5>' + '\
-                        <p class="card-text">' + events[i].description.substring(0,150) + '...</p></div>' + '\
-                        <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i].when + '</h5></li>' + '\
-                        <li class="list-group-item">' + events[i].group + '</li></ul>' + '\
-                        <a href="view/' + events[i].id + '"><div class="card-body viewEvBut">View Event</div></a></div></div>' + '\
+                        <p class="card-text date">' + events[i].when + '</p>\
+                        <p class="card-text group">' + events[i].group + '</p>\
+                        <p class="card-text desc">' + events[i].description.substring(0,175) + '...</p></div>' + '\
+                        </div></a></div>' + '\
                         <div class="col-md-6"></div></div>'
                   }
                   else{
                         var event = '<div class="row">\
-                        <div class="col-md-6"><div class="card"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                        <div class="col-md-6"><a href="view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                         <h5 class="card-title">' + events[i].name + '</h5>' + '\
-                        <p class="card-text">' + events[i].description.substring(0,150) + '...</p></div>' + '\
-                        <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i].when + '</h5></li>' + '\
-                        <li class="list-group-item">' + events[i].group + '</li></ul>' + '\
-                        <a href="view/' + events[i].id + '"><div class="card-body viewEvBut">View Event</div></a></div></div>' + '\
-                        <div class="col-md-6"><div class="card"><img src="' + events[i+1].img + '" class="card-img-top"><div class="card-body">' + '\
+                        <p class="card-text date">' + events[i].when + '</p>\
+                        <p class="card-text group">' + events[i].group + '</p>\
+                        <p class="card-text desc">' + events[i].description.substring(0,175) + '...</p></div>' + '\
+                        </div></a></div>' + '\
+                        <div class="col-md-6"><a href="view/' + events[i+1].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i+1].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                         <h5 class="card-title">' + events[i+1].name + '</h5>' + '\
-                        <p class="card-text">' + events[i+1].description.substring(0,150) + '...</p> </div>' + '\
-                        <ul class="list-group list-group-flush"><li class="list-group-item"><h5>' + events[i+1].when + '</h5></li>' + '\
-                        <li class="list-group-item">' + events[i+1].group + '</li></ul>' + '\
-                        <a href="view/' + events[i+1].id + '"><div class="card-body viewEvBut">View Event</div></a></div>'
-                  }
-
+                        <p class="card-text date">' + events[i+1].when + '</p>\
+                        <p class="card-text group">' + events[i+1].group + '</p>\
+                        <p class="card-text desc">' + events[i+1].description.substring(0,175) + '...</p></div>' + '\
+                        </div></div></div>'
+                }
             }
 
             i=i+2
@@ -72,17 +71,15 @@ $(document).ready(function(){
       $("#viewAllTab").addClass("active");
       $("#uploadTab").removeClass("active");
 
-      //initial display 
-      display_events(events);
-
-
       var checkEnv = document.getElementById("environmental-justice");
-      var checktrans = document.getElementById("trans-rights");
+      var checktrans = document.getElementById("lgbtq");
       var checkIndg = document.getElementById("indigenous-rights");
+      var checkImm = document.getElementById("immigration");
 
       var indigenous_events=[];
-      var trans_events=[];
+      var lgbtq_events=[];
       var environmental_events=[];
+      var imm_events=[];
       for (e = 0; e < events.length; e++) {
             if(events[e].issue_tags == "indigenous-rights"){
                   indigenous_events.push(events[e])
@@ -90,8 +87,11 @@ $(document).ready(function(){
             if(events[e].issue_tags == "environmental-justice"){
                    environmental_events.push(events[e])
             }
-            if(events[e].issue_tags == "trans-rights"){
-                   trans_events.push(events[e])
+            if(events[e].issue_tags == "lgbtq"){
+                   lgbtq_events.push(events[e])
+            }
+            if(events[e].issue_tags == "immigration"){
+                   imm_events.push(events[e])
             }
       }
 
@@ -107,17 +107,21 @@ $(document).ready(function(){
               display_events(environmental_events);
           } 
           else if (checktrans.checked == true) {
-              display_events(trans_events);
+              display_events(lgbtq_events);
           } 
           else if (checkIndg.checked == true){
               display_events(indigenous_events);
+          }
+          else if (checkImm.checked == true){
+              display_events(imm_events);
           }
           else{
             display_events(events)
           }
       }
 
-
+      //initial display 
+      display_events(events);
 
       
 });

@@ -4,7 +4,7 @@ from flask import render_template
 from flask import Response, request, jsonify, redirect
 app = Flask(__name__)
 
-current_id = 4
+current_id = 11
 
 events=[
 {
@@ -48,7 +48,7 @@ events=[
 	"group": "Native American Council & The Journal of Global Health",
 	"issue_tags": "indigenous-rights",
 	"name":"Health & Native American Communities",
-	"description": "oin The Journal of Global Health and the Native American Council of Columbia University for"
+	"description": "Join The Journal of Global Health and the Native American Council of Columbia University for"
 	"an event exploring the effects of governmental policies, environmental injustice, and healthcare discrimination"
 	" on Native American health. Light refreshments will be provided."
 	"The following speakers will be at the event: <br>"
@@ -62,6 +62,20 @@ events=[
 },
 {
 	"id":3,
+	"group": "UndocU",
+	"issue_tags": "immigration",
+	"name":"Constitution Review and Position Overview",
+	"description": "Hi everyone! Hope y’all enjoyed the break. For this meeting, Undo_CU will be going over our constitution as well as the "
+	"E-board positions that we will be voting on next week. Please come if you’re interested in getting more involved with the group and "
+	"invite your friends! We will be having snacks as well.",
+	"facebook-link":"https://www.facebook.com/events/748036925700527/",
+	"group-email":"undocumentedstudentsinitiative@gmail.com",
+	"img":"/static/media/undocu.jpg",
+	"when":"December 3rd 8 PM",
+	"location": "Lerner Hall"
+},
+{
+	"id":4,
 	"group": "Native American Council",
 	"issue_tags": "indigenous-rights",
 	"name":"Food Sovereignty Feast and Zine Release",
@@ -77,7 +91,7 @@ events=[
 	"location": "Diana Center"
 },
 {
-	"id":4,
+	"id":5,
 	"group": "CU Multicultural Affairs ",
 	"issue_tags": "indigenous-rights",
 	"name":"One Love Dinner",
@@ -91,7 +105,7 @@ events=[
 	"location": "Intercultural Resource Center"
 },
 {
-	"id":5,
+	"id":6,
 	"group": "Barnard Student Life",
 	"issue_tags": "environmental-justice",
 	"name":"POC Meetup: Environmental Justice",
@@ -105,9 +119,9 @@ events=[
 	"location": "Barnard Student Life"
 },
 {
-	"id":6,
+	"id":7,
 	"group": "Black Students Organization",
-	"issue_tags": "trans-rights",
+	"issue_tags": "lgbtq",
 	"name":"BSO Presents: Trans Lives Matter",
 	"description": "BSO this Thursday (11/21) will be holding our Trans Lives Matter meeting. We’ll be screening Major!,"
 	" the award-winning documentary following the life and campaigns of Miss Major Griffin-Gracy, a Black trans icon and activist"
@@ -118,6 +132,73 @@ events=[
 	"img":"/static/media/trans-lives.jpg",
 	"when":"November 21st 9-11 PM",
 	"location": "Intercultural Resource Center"
+},
+{
+	"id":8,
+	"group": "The Center for Gender and Sexuality Law",
+	"issue_tags": "lgbtq",
+	"name":"Rights of Trans and Gender-Nonconforming People",
+	"description": "This panel will discuss the current state of affairs for trans and gender non-conforming people in the U.S. More specifically, "
+	"speakers will reflect on arguments recently made before the Supreme Court in cases affecting the trans and GNC community. <br>"
+	"Speakers include: <br>"
+	"Katherine Franke, Sulzbacher Professor of Law, Gender, and Sexuality Studies, Columbia University<br>"
+	"Alejandra Caraballo, Staff Attorney, Transgender Legal Defense and Education Fund (TLDEF) <br>"
+	"Paisley Currah, Endowed Chair of Women's and Gender Studies, and Professor of Political Science, Brooklyn College and the Graduate Center <br>"
+	"This event is free and open to the public",
+	"facebook-link":"https://www.facebook.com/events/1492880080878160",
+	"group-email":"gender_sexuality_law@law.columbia.edu",
+	"img":"/static/media/politics.jpg",
+	"when":"November 20th 4:30-6 PM",
+	"location": "Columbia Law School"
+},
+{
+	"id":9,
+	"group": "UndoCU",
+	"issue_tags": "immigration",
+	"name":"UndoCU Updates and State of Immigration",
+	"description": "Hi everyone! Join UndoCU for updates on our events, demonstrations, etc. and a conversation on current news regarding immigration"
+	" and undocumented people. Hope to see y'all there!",
+	"facebook-link":"https://www.facebook.com/events/2524175141153659/",
+	"group-email":"undocumentedstudentsinitiative@gmail.com",
+	"img":"/static/media/undocu.jpg",
+	"when":"November 19th 8-9 PM",
+	"location": "552 W 114th St"
+},
+{
+	"id":10,
+	"group": "Barnard Center for Research on Women",
+	"issue_tags": "lgbtq",
+	"name":"Trans Journalists Resisting Objectivity",
+	"description": "Many people first learn about transgender issues in the news media. Coverage of transgender issues and the presence "
+	"and visibility of transgender journalists are both on the rise. At the same time, transgender people have and continue to be reported "
+	"on through distorted lenses of transphobia, white supremacy, and binary gender, and much of this reporting is presented as objective "
+	"and fair. <br>"
+	"In this panel discussion, Meredith Talusan and Lewis Raven Wallace, seasoned transgender journalists and movement journalism activists, "
+	"will address the problems of “objectivity” for trans journalists and trans subjects, and discuss how to chart a path of rigor, conscious "
+	"subjectivity, and community accountability in the worlds of journalism and non-fiction storytelling. <br>"
+	"###<br>"
+	"Events are free and open to the public. RSVP is preferred but not required. Seating is available on a first-come, first-seated basis.",
+	"facebook-link":"https://www.facebook.com/events/612808679215618",
+	"group-email":"bcrw@barnard.edu",
+	"img":"/static/media/view.jpg",
+	"when":"November 19th 6:30-8 PM",
+	"location": "Barnard Center for Research on Women"
+},
+{
+	"id":11,
+	"group": "Sunrise Columbia",
+	"issue_tags": "environmental-justice",
+	"name":"Beyond Individual Action on Climate Change",
+	"description": "What’s the most effective thing to do about climate change?"
+	" Mainstream responses to the climate crisis tend to focus either on personal responsibility or mass action. "
+	"In the context of a growing ecological breakdown, it’s time to expand our arsenal. All of us have a web of "
+	"individual connections—parents, friends, coworkers, professors—which we often forget about. In this workshop, "
+	"we’ll develop tailored plans for leveraging our personal connections towards maximum impact on climate change.",
+	"facebook-link":"https://www.facebook.com/events/456522618589804/",
+	"group-email":"team@sunrisemovement.org",
+	"img":"/static/media/indivAction.jpg",
+	"when":"November 16th 2-4 PM",
+	"location": "Room 614 Milstein"
 }
 ]
 	
