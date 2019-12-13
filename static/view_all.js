@@ -1,5 +1,7 @@
 var display_events = function(events){
 
+      $("#number").html(events.length);
+
       //clear entries to allow for potential update
       $("#allEvents").html("");
      
