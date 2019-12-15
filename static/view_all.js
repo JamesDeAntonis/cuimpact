@@ -74,7 +74,7 @@ $(document).ready(function(){
       $("#uploadTab").removeClass("active");
 
       var checkEnv = document.getElementById("environmental-justice");
-      var checktrans = document.getElementById("lgbtq");
+      var checkLGBTQ = document.getElementById("lgbtq");
       var checkIndg = document.getElementById("indigenous-rights");
       var checkImm = document.getElementById("immigration");
 
@@ -105,25 +105,32 @@ $(document).ready(function(){
         
       // the event handler!
       function filterItems(e) {
+          var total_events = []
           if (checkEnv.checked == true) {
-              display_events(environmental_events);
+              total_events=total_events.concat(environmental_events)
           } 
-          else if (checktrans.checked == true) {
-              display_events(lgbtq_events);
+          if (checkLGBTQ.checked == true) {
+              total_events=total_events.concat(lgbtq_events)
           } 
-          else if (checkIndg.checked == true){
-              display_events(indigenous_events);
+          if (checkIndg.checked == true){
+              total_events=total_events.concat(indigenous_events)
           }
-          else if (checkImm.checked == true){
-              display_events(imm_events);
+          if (checkImm.checked == true){
+               total_events=total_events.concat(imm_events)
+          }
+
+          if(total_events.length == 0){
+              display_events(events)
           }
           else{
-            display_events(events)
-          }
+            total_events.sort(function(a, b) { 
+              return a.id - b.id  
+            });
+              display_events(total_events)
+           }
+
       }
 
       //initial display 
       display_events(events);
-
-      
 });
