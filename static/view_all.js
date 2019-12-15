@@ -104,7 +104,7 @@ $(document).ready(function(){
       }
         
       // the event handler!
-      function filterItems(e) {
+      function filterItems() {
           var total_events = []
           if (checkEnv.checked == true) {
               total_events=total_events.concat(environmental_events)
@@ -130,6 +130,10 @@ $(document).ready(function(){
            }
 
       }
+      $("#clearFilters").click(function(){
+          $('input:checkbox').prop('checked', false);
+          filterItems()
+      });
 
       //initial display 
       display_events(events);
