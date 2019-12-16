@@ -10,9 +10,8 @@ var upload_event = function(new_item){
 		success: function(result){
 			//add writing to writing variable
 			events.unshift(new_event)
-			location.href = "/view/" + current_id
 			current_id += 1
-			
+			location.href = "/view/" + current_id
 		},
         error: function(request, status, error){
 
@@ -38,10 +37,10 @@ $(document).ready(function(){
     		"group": $("#groupName").val(),
     		"group-email": $("#emailName").val(),
             "description": $("#descriptionEvent").val(), 
-            "issue-tags": $("#genre").val(),
+            "issue-tags": $("#issue-tagSelect").val(),
             "facebook-link": $("#eventLink").val(),
             "img": $("#imageLink").val(),
-            "when":$("#whenName").val()
+            "when":$("#whenName").val(),
             "location": $("#locationName").val()
         };
 		upload_event(new_event);

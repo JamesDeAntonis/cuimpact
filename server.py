@@ -247,7 +247,7 @@ def save_event():
 	group = json_data["group"]
 	group_email = json_data["group-email"]
 	description = json_data["description"]
-	issue_tags = json_data["issue_tags"]
+	issue_tags = json_data["issue-tags"]
 	facebook_link = json_data["facebook-link"]
 	img = json_data["img"]
 	when = json_data["when"]
@@ -256,6 +256,7 @@ def save_event():
 	#add new entry to writing array
 	current_id += 1
 	new_event = {
+		"id":current_id,
 		"name": name,
 		"group": group,
 		"group-email": group_email,
@@ -266,8 +267,10 @@ def save_event():
 		"when": when,
 		"location":location
 	}
+	print(new_event)
+	print(events)
 	events.append(new_event)
-
+	print(events)
 	return jsonify(events = events)
 
 if __name__ == '__main__':
