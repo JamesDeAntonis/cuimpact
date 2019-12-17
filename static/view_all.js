@@ -1,7 +1,6 @@
 var display_events = function(events){
 
       $("#number").html(events.length);
-
       //clear entries to allow for potential update
       $("#allEvents").html("");
      
@@ -130,11 +129,30 @@ $(document).ready(function(){
            }
 
       }
+
+      if(clicked_filter == "environmental-justice"){
+        $("#environmental-justice").prop('checked',true)
+        filterItems()
+      }
+      else if(clicked_filter == "lgbtq"){
+        $("#lgbtq").prop('checked',true)
+        filterItems()
+      }
+      else if(clicked_filter == "indigenous-rights"){
+        $("#indigenous-rights").prop('checked',true)
+        filterItems()
+      }
+      else if(clicked_filter == "immigration"){
+        $("#immigration").prop('checked',true)
+        filterItems()
+      }
+      else{
+        filterItems()
+      }
+
       $("#clearFilters").click(function(){
           $('input:checkbox').prop('checked', false);
           filterItems()
       });
 
-      //initial display 
-      display_events(events);
 });

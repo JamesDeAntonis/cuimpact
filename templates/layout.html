@@ -11,8 +11,7 @@
 
 		<style>
 		#bar{
-			margin-bottom:15px;
-			background-color:#609197;
+			background-color:#4C797E;
 		}
 		#head{
 			margin-top:30px;
@@ -44,10 +43,9 @@
 		}
 		#welcome{
 		  position: absolute;
-		  top: 20px;
-		  left: 270px;
-		  background-color: rgba(0,0,0,0.85);
-		  color: white;
+		  top: 200px;
+		  left: 360px;
+		  color: black;
 		  padding-left: 20px;
 		  padding-right: 20px;
 		  text-align: center;
@@ -55,7 +53,7 @@
 		.welcomeButton{
 		  background-color: rgba(0,0,0,0.85);
 		  color: white;
-		  padding:20px;
+		  padding:15px;
 		}
 		.event{
 			background-color: black;
@@ -64,19 +62,19 @@
 		}
 		#upload{
 		  position: absolute;
-		  bottom: 300px;
-		  left: 100px;
+		  top: 270px;
+		  right: 300px;
 		}
 		#find{
 		  position: absolute;
-		  bottom: 300px;
-		  right: 100px;
+		  top: 270px;
+		  left: 290px;
 		}
 		.head{
 			font-size:30px;
 		}
 		.smaller{
-			font-size:25px;
+			font-size:22px;
 		}
 		.layer {
 			background-color: rgba(248, 247, 216, 0.2);
@@ -91,6 +89,40 @@
 		}
 		.welcomeButton:hover{
 			background-color: rgba(0,0,0,0.6);
+		}
+		.issueWelcome{
+		  color: black;
+		  border-width: 1px;
+		  border-color: black;
+		  border-style: solid;
+		  padding:12px;
+
+		}
+		.issueWelcome:hover{
+			background-color: rgba(0,0,0,0.2);
+		}
+		.issueB{
+			font-size:16px;
+		}
+		#envJ{
+			position: absolute;
+		  	top: 360px;
+		  	left: 170px;
+		}
+		#lgbtqH{
+			position: absolute;
+		  	top: 360px;
+		  	left: 360px;
+		}
+		#imm{
+			position: absolute;
+		  	top: 360px;
+		  	left: 445px;
+		}
+		#ind{
+			position: absolute;
+		  	top: 360px;
+		  	left: 570px;
 		}
 		.card{
 			margin-bottom:15px;
@@ -109,10 +141,10 @@
 			color:white;
 		}
 		.center-block{
-		display: block;
-	    margin-left: auto;
-	    margin-right: auto;
-	    margin-bottom:10px;
+			display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		    margin-bottom:10px;
 		}
 		#buttons{
 			margin:20px;
@@ -130,8 +162,8 @@
 		}
 		a.custom-card,
 		a.custom-card:hover {
-  		color: inherit;
-  		text-decoration: none
+  			color: inherit;
+  			text-decoration: none
 		}
 		.card{
 			margin-bottom:50px;
@@ -169,6 +201,28 @@
 			margin-right:10px;
 			margin-top:5px;
 		}
+		#postHead{
+			font-size:22px;
+			font-weight:bold;
+		}
+		#addEventDiv{
+			display: flex;
+  			justify-content: center;
+		}
+		#opening{
+			width:100%;
+			height:250px;
+			background-color:#9ED6C9;
+		}
+		.homeImage{
+			width:100%;
+		}
+		#viewHead{
+			margin-top:10px;
+		}
+		#postH{
+			margin-top:10px;
+		}
 		</style>
 	</head>
 
@@ -183,7 +237,7 @@
 		    		<span><img src="/static/media/fist.jpg" class="img-fluid logo-image"></span>
 		    		CU Impact
 			    </a>		    
-			     <a class="nav-item nav-link" href="/view_all" id="viewAllTab"><span></span>Find an Event</a>
+			     <a class="nav-item nav-link" href="/view_all/all" id="viewAllTab"><span></span>Find an Event</a>
 			     <a class="nav-item nav-link" href="/upload_event" id="uploadTab">Post Event</a>
 			    </div>
 			  </div>

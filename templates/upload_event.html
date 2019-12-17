@@ -5,9 +5,9 @@
 	var events = {{events|tojson}}
 	var current_id = {{current_id|tojson}}
 </script>
-   <div class="row field">
+   <div class="row field" id="postH">
 	   	<div class="col-md-12">
-	    	<p class="text-center" id="new">Post event!</p>
+	    	<p class="text-center" id="postHead">Post your event!</p>
 	    </div>
    </div>
 <form>
@@ -38,7 +38,7 @@
   <div class="form-group">
     <label for="descriptionEvent">Description of Event:</label>
     <br>
-    <textarea rows="4" cols="100" id="descriptionEvent" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta ultrices ex sed maximus."class="form-control"></textarea>
+    <textarea rows="3" cols="100" id="descriptionEvent" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta ultrices ex sed maximus."class="form-control"></textarea>
   </div>
   <div class="form-group">
     <label for="eventLink">Facebook Event Link:</label>
@@ -57,6 +57,8 @@
     <label for="imageLink">Link to Image:</label>
     <input type="text" class="form-control" id="imageLink" placeholder="Google Drive link...">
   </div>
-  <button type="submit" class="btn btn-primary" id="addEvent">Post Event</button>
+  <div id="addEventDiv">
+    <button type="submit" class="btn btn-primary" id="addEvent">Post Event</button>
+  </div>
 </form>
  {% endblock %}

@@ -4,8 +4,9 @@
 <script>
 	var events = {{events|tojson}}
 	var current_id= {{current_id|tojson}}
+	var clicked_filter= {{clicked_filter|tojson}}
 </script>
-   <div class="row">
+   <div class="row" id="viewHead">
 		<div class="col-md-12 header">
 		Showing (<span id="number"></span>) Activist Events on Campus
 		</div>

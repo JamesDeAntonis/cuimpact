@@ -210,9 +210,10 @@ def hello():
 def home():
 	return render_template('home.html')
 
-@app.route('/view_all')
-def view_all():
-	return render_template('view_all.html',events=events, current_id = current_id)
+@app.route('/view_all/<item_filter>', methods=['GET', 'POST'])
+def view_all(item_filter=None):
+	clicked_filter = item_filter
+	return render_template('view_all.html',events=events, current_id = current_id, clicked_filter=clicked_filter)
 
 @app.route('/upload_event')
 def upload_writing():
@@ -271,6 +272,7 @@ def save_event():
 	print(events)
 	events.append(new_event)
 	print(events)
+	
 	return jsonify(events = events)
 
 if __name__ == '__main__':

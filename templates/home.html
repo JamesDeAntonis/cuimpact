@@ -1,20 +1,26 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="row">	
-	<div class="home-container">
-  	<img src="/static/media/activism.jpg" style="width:100%;">
-  	<div class="layer">
-  	<div class="text-block" id="welcome">
-  		<span class="head">Your central hub for all of the<br> activist events on campus.</span>
-  		<p> Want to learn about or fight for an issue? Find an event happening on campus! </p>
-  	</div>
-  	<a href="/upload_event" class="welcomeLink"><div class="welcomeButton" id="upload">
-  		<span class="smaller">Upload your event!</span>
-  	</div></a>
-  	<a href="/view_all" class="welcomeLink"><div class="welcomeButton" id="find">
-  		<span class="smaller">Find an event based on issue!</span>
-  	</div></a>
-	</div>
+<div>
+    <img src="/static/media/topAct.jpg" class="homeImage">
+    <div id="opening">
+    </div>
+    <div class="text-block" id="welcome">
+      <span class="head"><b>Find an event on campus for an issue you care about.</b><br></span>
+    </div>
+    <a href="/view_all/all" class="welcomeLink"><div class="welcomeButton" id="find">
+    <span class="smaller">Find an activist event for</span></div></a>
+    <a href="/view_all/environmental-justice" class="welcomeLink"><div class="issueWelcome" id="envJ">
+    <span class="issueB">Environmental Justice</span></div></a>
+    <a href="/view_all/indigenous-rights" class="welcomeLink"><div class="issueWelcome" id="ind">
+    <span class="issueB">Indigenous Rights</span></div></a>
+    <a href="/view_all/lgbtq" class="welcomeLink"><div class="issueWelcome" id="lgbtqH">
+    <span class="issueB">LGBTQ</span></div></a>
+    <a href="/view_all/immigration" class="welcomeLink"><div class="issueWelcome" id="imm">
+    <span class="issueB">Immigration</span></div></a>
+
+    <a href="/upload_event" class="welcomeLink"><div class="welcomeButton" id="upload">
+      <span class="smaller">Post an Event</span></div></a>
+  	<img src="/static/media/testAct.jpg" class="homeImage">
 	</div>
 </div>
 {% endblock %}
