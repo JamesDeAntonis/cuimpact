@@ -11,7 +11,7 @@ $(document).ready(function(){
   $("#descriptionView").html(description);
   $("#whenView").html(when);
   $("#locView").html(loc);
-  var buttonLinks = ' <a class="btn btn-primary" href="' + link + '"> RSVP</a><a class="btn btn-warning" href="mailto:'+ email +'">Email</a>'
+  var buttonLinks = ' <a class="btn btn-primary btnVi" href="' + link + '" target="_blank"> RSVP on Facebook</a><a class="btn btn-warning btnVi" href="mailto:'+ email +'">Email</a>'
   $("#buttons").html(buttonLinks)
 });
 
