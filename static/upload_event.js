@@ -9,9 +9,9 @@ var upload_event = function(new_item){
 		data: JSON.stringify(new_event),
 		success: function(result){
 			//add writing to writing variable
-			events.unshift(new_event)
 			current_id += 1
 			location.href = "/view/" + current_id
+			events.unshift(new_event)
 		},
         error: function(request, status, error){
 

@@ -268,10 +268,8 @@ def save_event():
 		"when": when,
 		"location":location
 	}
-	print(new_event)
-	print(events)
+
 	events.append(new_event)
-	print(events)
 	
 	return jsonify(events = events)
 

@@ -130,6 +130,11 @@ $(document).ready(function(){
 
       }
 
+      $("#clearFilters").click(function(){
+          $('input:checkbox').prop('checked', false);
+          filterItems()
+      });
+
       if(clicked_filter == "environmental-justice"){
         $("#environmental-justice").prop('checked',true)
         filterItems()
@@ -150,9 +155,6 @@ $(document).ready(function(){
         filterItems()
       }
 
-      $("#clearFilters").click(function(){
-          $('input:checkbox').prop('checked', false);
-          filterItems()
-      });
+
 
 });
