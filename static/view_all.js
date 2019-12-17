@@ -17,13 +17,13 @@ var display_events = function(events){
             //if even 
             if(odd == false){
                   var event = '<div class="row">\
-                  <div class="col-md-6"><a href="view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                  <div class="col-md-6"><a href="/view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                   <h5 class="card-title">' + events[i].name + '</h5>' + '\
                   <p class="card-text date">' + events[i].when + '</p>\
                   <p class="card-text group">' + events[i].group + '</p>\
                   <p class="card-text desc">' + events[i].description.substring(0,175) + '...</p></div>' + '\
                   </div></a></div>' + '\
-                  <div class="col-md-6"><a href="view/' + events[i+1].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i+1].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                  <div class="col-md-6"><a href="/view/' + events[i+1].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i+1].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                   <h5 class="card-title">' + events[i+1].name + '</h5>' + '\
                   <p class="card-text date">' + events[i+1].when + '</p>\
                   <p class="card-text group">' + events[i+1].group + '</p>\
@@ -35,7 +35,7 @@ var display_events = function(events){
                   //if last element, accompanying column must be blank
                   if(i == (events.length-1)){
                         var event = '<div class="row">\
-                        <div class="col-md-6"><a href="view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                        <div class="col-md-6"><a href="/view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                         <h5 class="card-title">' + events[i].name + '</h5>' + '\
                         <p class="card-text date">' + events[i].when + '</p>\
                         <p class="card-text group">' + events[i].group + '</p>\
@@ -45,13 +45,13 @@ var display_events = function(events){
                   }
                   else{
                         var event = '<div class="row">\
-                        <div class="col-md-6"><a href="view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                        <div class="col-md-6"><a href="/view/' + events[i].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                         <h5 class="card-title">' + events[i].name + '</h5>' + '\
                         <p class="card-text date">' + events[i].when + '</p>\
                         <p class="card-text group">' + events[i].group + '</p>\
                         <p class="card-text desc">' + events[i].description.substring(0,175) + '...</p></div>' + '\
                         </div></a></div>' + '\
-                        <div class="col-md-6"><a href="view/' + events[i+1].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i+1].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
+                        <div class="col-md-6"><a href="/view/' + events[i+1].id + '" class="custom-card"><div class="card border border-dark"><img src="'+ events[i+1].img + '" class="card-img-top img-fluid"><div class="card-body">' + '\
                         <h5 class="card-title">' + events[i+1].name + '</h5>' + '\
                         <p class="card-text date">' + events[i+1].when + '</p>\
                         <p class="card-text group">' + events[i+1].group + '</p>\
