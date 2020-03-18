@@ -1,1 +1,1 @@
-web: node server.py
+web: node server:app
